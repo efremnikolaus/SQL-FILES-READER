@@ -1,0 +1,21 @@
+2023-06-10 00:02:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]src/sql/find_longest_projects.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+src/sql/find_longest_projects.sql [42001-214]
+2023-06-10 00:03:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]sql/find_longest_projects.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+sql/find_longest_projects.sql [42001-214]
+2023-06-10 00:05:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]src/sql/find_longest_projects.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+src/sql/find_longest_projects.sql [42001-214]
+2023-06-10 00:06:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]src/sql/find_max_projects_client.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+src/sql/find_max_projects_client.sql [42001-214]
+2023-06-10 00:07:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]src/sql/find_max_projects_client.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+src/sql/find_max_projects_client.sql [42001-214]
+2023-06-10 00:08:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]src/sql/find_max_projects_client.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+src/sql/find_max_projects_client.sql [42001-214]
+2023-06-10 00:08:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]src/sql/find_max_projects_client.sql"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+src/sql/find_max_projects_client.sql [42001-214]
