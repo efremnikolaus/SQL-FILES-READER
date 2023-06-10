@@ -2,18 +2,23 @@ package org.example.ClassesForQueries;
 
 public class LongestProjects {
     private int id;
-    private int months;
+    private int clientId;
+    private String startDate;
+    private String finishDate;
 
-    public LongestProjects(int id, int months) {
+    public LongestProjects(int id, int clientId, String startDate, String finishDate) {
         this.id = id;
-        this.months = months;
+        this.clientId = clientId;
+        this.startDate = startDate;
+        this.finishDate = finishDate;
     }
-
     @Override
     public String toString() {
         return "LongestProjects{" +
                 "id=" + id +
-                ", months=" + months +
+                ", clientId=" + clientId +
+                ", startDate='" + startDate + '\'' +
+                ", finishDate='" + finishDate + '\'' +
                 '}';
     }
 }
