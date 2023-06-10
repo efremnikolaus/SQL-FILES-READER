@@ -100,20 +100,17 @@ public class DatabaseQueryService {
         System.out.println(result);
         return result;
         }
-      public List<ProjectPrices> printProjectPrices() {
+      public List<ProjectPrices> printProjectPrices() throws IOException {
+          String sqlQuery = Files.readString(Paths.get(PRINT_PROJECT_PRICES));
           List<ProjectPrices> result = new ArrayList<>();
-          try {
-              Connection connection = DatabaseH2.getInstance().getConnection();
-              String sqlQuery = Files.readString(Paths.get(PRINT_PROJECT_PRICES));
-              ResultSet resultSet = connection.createStatement().executeQuery(sqlQuery);
-
+          try (Connection connection = DatabaseH2.getInstance().getConnection();
+               ResultSet resultSet = connection.createStatement().executeQuery(sqlQuery);) {
               while (resultSet.next()) {
                   int projectId = resultSet.getInt("project_id");
-                  String projectName = resultSet.getString("project_name");
                   int projectCost = resultSet.getInt("project_cost");
-                  result.add(new ProjectPrices(projectId, projectName, projectCost));
+                  result.add(new ProjectPrices(projectId, projectCost));
               }
-          } catch (IOException | SQLException ex) {
+          } catch (SQLException ex) {
               System.out.println("Error selecting database: " + ex.getMessage());
               ex.printStackTrace();
           }
@@ -121,7 +118,7 @@ public class DatabaseQueryService {
           return result;
       }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<LongestProjects> longestProjectsList = new DatabaseQueryService().findLongestProjects();
         List<MaxProjectCountClient> maxProjectCountClients = new DatabaseQueryService().findMaxProjectsClient();
         List<MaxSalaryWorker> maxSalaryWorkers = new DatabaseQueryService().findMaxSalaryWorker();
